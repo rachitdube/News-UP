@@ -15,21 +15,21 @@ const article10 = document.querySelector('.article-10');
 
 
 async function searchNews(keyword){
-    const api_key = '36aa796b2c524cf28829ff6e4b49ab6b';
-    const url = `https://newsapi.org/v2/everything?q=${keyword}&apiKey=${api_key}`;
+    const api_key = 'pub_437242489f236aed819a675c35e0c0c5a452f';
+    const url = `https://newsdata.io/api/1/news?apikey=pub_437242489f236aed819a675c35e0c0c5a452f&q=${keyword}&language=en`;
 
     const news_data = await fetch(`${url}`).then(response => response.json());
     console.log("run");
-    article1.innerHTML = `${news_data.articles[0].description}`;
-    article2.innerHTML = `${news_data.articles[1].description}`;
-    article3.innerHTML = `${news_data.articles[2].description}`;
-    article4.innerHTML = `${news_data.articles[3].description}`;
-    article5.innerHTML = `${news_data.articles[4].description}`;
-    article6.innerHTML = `${news_data.articles[5].description}`;
-    article7.innerHTML = `${news_data.articles[6].description}`;
-    article8.innerHTML = `${news_data.articles[7].description}`;
-    article9.innerHTML = `${news_data.articles[8].description}`;
-    article10.innerHTML = `${news_data.articles[9].description}`;
+    article1.innerHTML = `${news_data.results[0].description}`;
+    article2.innerHTML = `${news_data.results[1].description}`;
+    article3.innerHTML = `${news_data.results[2].description}`;
+    article4.innerHTML = `${news_data.results[3].description}`;
+    article5.innerHTML = `${news_data.results[4].description}`;
+    article6.innerHTML = `${news_data.results[5].description}`;
+    article7.innerHTML = `${news_data.results[6].description}`;
+    article8.innerHTML = `${news_data.results[7].description}`;
+    article9.innerHTML = `${news_data.results[8].description}`;
+    article10.innerHTML = `${news_data.results[9].description}`;
     console.log(news_data)
 }
 
