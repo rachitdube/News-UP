@@ -1,66 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>NEWS Up</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>NEWS Up</title>
 </head>
+
 <body>
 
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-xl cursor-pointer">NEWS-UP</span>
-          </a>
-          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center cursor-pointer">
-            <a class="mr-5 hover:text-gray-900">Home</a>
-            <a class="mr-5 hover:text-gray-900">About</a>
-            <a class="mr-5 hover:text-gray-900">Contact</a>
-          </nav>
-          <button class="inline-flex items-center bg-red-500 border-0 py-1 px-3 focus:outline-none hover:bg-black-500 rounded text-white mt-4 md:mt-0">LOGIN
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
-      </header>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full"
+          viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl cursor-pointer">NEWS-UP</span>
+      </a>
+      <nav
+        class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center cursor-pointer">
+        <a class="mr-5 hover:text-gray-900">Home</a>
+        <a class="mr-5 hover:text-gray-900">About</a>
+        <a class="mr-5 hover:text-gray-900">Contact</a>
+      </nav>
+      <button
+        class="inline-flex items-center bg-red-500 border-0 py-1 px-3 focus:outline-none hover:bg-black-500 rounded text-white mt-4 md:mt-0">LOGIN
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-     <section class="text-gray-600 body-font items-center">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Get Access to all top NEWS Headlines According to your City,State,& Nation</h1>
-            <p class="mb-8 leading-relaxed">Search The State,City or Topic on which you want the top NEWS headlines.</p>
-            <div class="flex w-200 md:justify-start justify-center items-end">
-              <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
-                <label for="hero-field" class="leading-7 text-sm text-gray-600">City, State, Nation, Topic</label>
-                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-red-200 focus:bg-transparent focus:border-red-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-              </div>
-              <button class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg" id="searchbtn">Search</button>
+  <section class="text-gray-600 body-font items-center">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div
+        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Get Access to all top NEWS Headlines
+          According to your City,State,& Nation</h1>
+        <p class="mb-8 leading-relaxed">Search The State,City or Topic on which you want the top NEWS headlines.</p>
+        <!-- Filters Section -->
+        <div class="w-full mb-6">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+            <!-- Language Filter -->
+            <div>
+              <label for="language-select" class="block text-sm text-gray-600 mb-1">Language</label>
+              <select id="language-select"
+                class="w-full bg-gray-100 rounded border border-gray-300 focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base outline-none text-gray-700 py-2 px-3">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="bn">Bengali</option>
+                <option value="te">Telugu</option>
+                <option value="ta">Tamil</option>
+                <option value="mr">Marathi</option>
+                <option value="gu">Gujarati</option>
+                <option value="kn">Kannada</option>
+              </select>
+            </div>
+
+            <!-- Country Filter -->
+            <div>
+              <label for="country-select" class="block text-sm text-gray-600 mb-1">Country</label>
+              <select id="country-select"
+                class="w-full bg-gray-100 rounded border border-gray-300 focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base outline-none text-gray-700 py-2 px-3">
+                <option value="">All Countries</option>
+                <option value="in">India</option>
+                <option value="us">United States</option>
+                <option value="gb">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+              </select>
+            </div>
+
+            <!-- Category Filter -->
+            <div>
+              <label for="category-select" class="block text-sm text-gray-600 mb-1">Category</label>
+              <select id="category-select"
+                class="w-full bg-gray-100 rounded border border-gray-300 focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base outline-none text-gray-700 py-2 px-3">
+                <option value="">All Categories</option>
+                <option value="politics">Politics</option>
+                <option value="business">Business</option>
+                <option value="sports">Sports</option>
+                <option value="technology">Technology</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="health">Health</option>
+                <option value="science">Science</option>
+                <option value="top">Top Stories</option>
+              </select>
+            </div>
+
+            <!-- State/Region Filter for India -->
+            <div>
+              <label for="state-select" class="block text-sm text-gray-600 mb-1">Indian State</label>
+              <select id="state-select"
+                class="w-full bg-gray-100 rounded border border-gray-300 focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base outline-none text-gray-700 py-2 px-3">
+                <option value="">All States</option>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="delhi">Delhi</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="tamil nadu">Tamil Nadu</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="uttar pradesh">Uttar Pradesh</option>
+                <option value="west bengal">West Bengal</option>
+                <option value="punjab">Punjab</option>
+                <option value="kerala">Kerala</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Search Input -->
+          <div class="flex w-full md:justify-start justify-center items-end">
+            <div class="relative mr-4 flex-grow">
+              <label for="hero-field" class="leading-7 text-sm text-gray-600">Search Keywords (City, Topic,
+                etc.)</label>
+              <input type="text" id="hero-field" name="hero-field"
+                class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-red-200 focus:bg-transparent focus:border-red-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <button
+              class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg"
+              id="searchbtn">Search</button>
+          </div>
         </div>
-      </section>
-      <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
-      <h2>Top Headlines Here</h2>
-      <div class="articles">
-        <ol type="1">
-          <li class="article-1"></li>
-          <li class="article-2"></li>
-          <li class="article-3"></li>
-          <li class="article-4"></li>
-          <li class="article-5"></li>
-          <li class="article-6"></li>
-          <li class="article-7"></li>
-          <li class="article-8"></li>
-          <li class="article-9"></li>
-          <li class="article-10"></li>
-        </ol>
-        </div>
-    
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="App.js"></script>
- </head>
+      </div>
+  </section>
+  <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+
+  <!-- Loading indicator -->
+  <div id="loading" class="hidden text-center py-8">
+    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-red-500"></div>
+    <p class="mt-2 text-gray-600">Loading news...</p>
+  </div>
+
+  <!-- Error message -->
+  <div id="error-message" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+    <p>Failed to load news. Please try again.</p>
+  </div>
+
+  <h2 class="text-2xl font-bold mb-6 text-center">Latest News Headlines</h2>
+
+  <!-- News Articles Container -->
+  <div id="news-container" class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
+      <!-- Articles will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="App.js"></script>
+  </head>
 </body>
+
 </html>
